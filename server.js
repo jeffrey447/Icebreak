@@ -21,10 +21,8 @@ app.use(passport.session());
 
 app.use(bodyParser.json());
 
-const db = process.env.MONGO_URI;
-
 mongoose
-    .connect(db, { 
+    .connect(process.env.MONGO_URI, { 
         useNewUrlParser: true, 
         useCreateIndex: true,
         useUnifiedTopology: true
