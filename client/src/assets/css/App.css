@@ -1,0 +1,69 @@
+/*
+
+Use Apple's Dark Mode Color Palette's
+https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
+
+*/
+
+body{
+    background-color: #313131;
+    color: white;
+}
+
+#cursor {
+    border-left: .1em solid white;
+    animation: blink .7s steps(1) infinite;
+}
+
+.home-container{
+    max-width: 1920px;
+    margin: auto;
+}
+
+.header{
+    padding: 1rem;
+}
+
+#icebreak-logo{
+    width: 12rem;
+}
+
+.login-container a{
+    outline: solid #3498db 1px;
+    color: #3498db;
+    background-color: transparent;
+    font-size: 1rem;
+    border: inherit;
+    padding: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.login-container button:hover{
+    color: white;
+    background-color: #3498db;
+}
+
+.marketingPitch{
+    text-align: center;
+    color: white !important;
+    position: relative;
+    top: 8rem;
+    margin: auto;
+    width: 52rem;
+}
+
+.marketingPitch .title{
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+@media screen and (min-width: 84.875rem) {
+    .home-container{
+        max-width:100rem;
+        padding:0;
+    }
+}

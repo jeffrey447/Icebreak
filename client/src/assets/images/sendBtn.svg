@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--PROPERTY OF ICEBREAK-->
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M773.963258,2.18295369 L747.707514,17.3256144 C746.682209,17.9145586 746.812496,19.3416156 747.832137,19.7719979 L753.853681,22.2976623 L770.128277,7.95913691 C770.439833,7.6816536 770.881678,8.10637295 770.615438,8.42915966 L756.969249,25.0498437 L756.969249,29.6084981 C756.969249,30.9449484 758.58368,31.4716004 759.376734,30.5032402 L762.973799,26.1257994 L770.031977,29.0818461 C770.83636,29.4216216 771.754037,28.9176213 771.901318,28.0511938 L775.97988,3.58735902 C776.172479,2.44344823 774.943246,1.61666122 773.963258,2.18295369 Z" id="path-1"></path>
+    </defs>
+    <g id="icebreak" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="groupPage" transform="translate(-1078.000000, -761.000000)">
+            <g id="Shouter" transform="translate(320.000000, 543.000000)">
+                <g id="enterShout" transform="translate(11.000000, 216.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#A8A8A8" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

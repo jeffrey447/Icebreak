@@ -1,0 +1,80 @@
+.shout-wrapper{
+    color: white;
+}
+
+.shout-entry{
+
+    background-color: #292929;
+    padding: 1rem;
+
+    .postedBy{
+        color: #D8D8D8;
+        font-size: 10pt;
+        position: relative;
+    }
+}
+
+.shout-input-container{
+
+    display: flex;
+
+    .shout-input{
+        width: 100%;
+        background-color: #313131;
+        outline: none;
+        color: white;
+        border: none;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        width: 3rem;
+    }
+}
+
+.shout-container .shout-header{
+
+    margin-left: 1rem;
+    position: absolute;
+    display: flex;
+    margin-top: -1rem;
+
+    .profile-picture{
+
+        margin-right: 1rem;
+
+        img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+        }
+
+        .online-status{
+            position: relative;
+            border-radius: 50%;
+            bottom: 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: #2ECC71;
+        }
+    }
+}
+
+.user-name-position{
+
+    color: white;
+    line-height: 1;
+
+    h3{
+        font-weight: 300;
+        color: white;
+    }
+
+    h5{
+        position: relative;
+        font-weight: lighter;
+        bottom: 0.8rem;
+    }
+
+}
