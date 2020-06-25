@@ -1,14 +1,14 @@
-import { Router } from 'express';
+const Router = require('express');
 const router = Router();
 
 // Located the models
-import Group, { find } from '../../models/groups';
+const Group = require('../../models/groups');
 
 //@route GET api/groups
 //@desc GET all groups
 //@access Public
 router.get('/', (req, res) => {
-    find().sort({ created: -1 })
+    Group.find().sort({ created: -1 })
         .then(group => res.json({
             success: true,
             groups: groups
@@ -45,4 +45,4 @@ router.delete('/:id', (req, res) => {
         .catch(err => res.status(404).json({ success: false, error: err.message }));
 });
 
-export default router; 
+module.exports = router;
