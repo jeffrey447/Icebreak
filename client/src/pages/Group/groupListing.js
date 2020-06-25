@@ -19,16 +19,14 @@ class GroupListing extends Component {
     }
 
     render() {
-
         const { groups } = this.props.group;
 
         return(
             <section className="GroupListing">
-                {groups.map(({ id, name}) => (
-                    <div className="group-test">
-                        <div className="id"> {id} </div>
-                        <div className="name"> {name} </div>
-                        <button className="remove-btn" onClick={this.onDeleteClick.bind(this, id)}> &times; </button>
+                {groups.map(group => (
+                    <div key={group._id} className="group-test">
+                        <div className="name"> {group.name} </div>
+                        <button className="remove-btn" onClick={this.onDeleteClick.bind(this, group['_id'])}> &times; </button>
                     </div>
                 ))}
             </section>

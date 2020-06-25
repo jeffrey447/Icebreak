@@ -24,7 +24,7 @@ class App extends Component {
           <Route exact path='/activity' component={Activity}/>
           <Route exact path='/create' component={createGroup}/>
           <Route exact path='/groups' component={GroupListing}/>
-          <Route path="/:group_id" component={Group}/>
+          <Route path="/:handler" component={Group}/>
           <Route component={NotFound}/>
         </Switch>
       </Provider>

@@ -13,6 +13,7 @@ class CreateGroup extends Component {
     state = {
         name: '',
         description: '',
+        handler: '',
     }
 
     onChange = e => {
@@ -23,6 +24,7 @@ class CreateGroup extends Component {
         e.preventDefault();
         const newGroup = {
             name: this.state.name,
+            handler: this.state.handler,
             description: this.state.description
         }
 

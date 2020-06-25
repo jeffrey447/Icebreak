@@ -19,7 +19,7 @@ const groupsSchema = new schema({
     },
     description: {
         type: String,
-        default: "null",
+        default: null,
         required: true
     },
     genre: {
@@ -44,6 +44,7 @@ const groupsSchema = new schema({
     },
     handler: {
         type: String,
+        unique: true,
     },
     members: {
         type: String,

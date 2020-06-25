@@ -9,11 +9,22 @@ const Group = require('../../models/groups');
 //@access Public
 router.get('/', (req, res) => {
     Group.find().sort({ created: -1 })
-        .then(group => res.json({
+        .then(groups => res.json({
             success: true,
             groups: groups
         }))
         .catch(err => res.status(404).json({ success: false, error: err.message }));
+});
+
+//@route GET api/groups
+//@desc GET group
+//@access Public
+router.get('/:handler', (req, res) => {
+    Group.find({ handler: `${req.params.handler}` })
+        .then(group => res.json({
+            success: true,
+            groups: group
+        }))
 });
 
 //@route POST api/groups
@@ -22,27 +33,31 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newGroup = new Group({
         name: req.body.name,
+        handler: req.body.handler,
         description: req.body.description
     })
 
     newGroup.save()
         .then(group => res.json({
             success: true,
-            group: group
+            groups: group
         }))
         .catch(err => res.status(404).json({ success: false, error: err.message }));
 });
 
 //@route DELETE api/groups
 //@desc Delete a POST
-//@access Public
+//@access Private
 router.delete('/:id', (req, res) => {
-    groups.findById(req.params.id)
-        .then(group => res.json({
-            success: true,
-            group: group
-        }))
-        .catch(err => res.status(404).json({ success: false, error: err.message }));
+    Group.find({ handler: `${req.params.handler}`})
+        .then(group =>
+            group.remove()
+            .then(res.json({
+                success: true,
+                groups: group
+            }))
+        .catch(err => res.status(404).json({ success: false, error: err.message }))
+    );
 });
 
 module.exports = router;
