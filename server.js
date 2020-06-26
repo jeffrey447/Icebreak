@@ -18,7 +18,8 @@ app.use(session({
     saveUninitialized: false
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(bodyParser.json());
 
 mongoose
@@ -30,8 +31,7 @@ mongoose
     .then(() => console.log("MongoDB connected."))
     .catch(err => console.log(`Error connecting to MongoDB: ${err.message}`));
 
- require('./Middleware/gpassport').initializeGoogleAuth(passport);
-
+require('./Middleware/gpassport').initializeGoogleAuth(passport);
 // use routes
 const groups = require('./routes/api/groups');
 app.use('/api/groups', groups);

@@ -5,7 +5,7 @@ const passportjs = require('passport');
 // load env vars
 require('dotenv').config();
 
-let initializeGoogleAuth = (passport) => {
+var initializeGoogleAuth = (passport) => {
   // used to serialize the user for the session
   passport.serializeUser((user, done) => {
     done(null, user);
