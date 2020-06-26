@@ -9,8 +9,6 @@ const app = express();
 // load env vars
 require('dotenv').config();
 
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(express.static('public'));
 app.use(session({
     secret: process.env.EXPRESS_SESSION_SECRET,
@@ -31,7 +29,7 @@ mongoose
     .then(() => console.log("MongoDB connected."))
     .catch(err => console.log(`Error connecting to MongoDB: ${err.message}`));
 
-require('./Middleware/gpassport').initializeGoogleAuth(passport);
+require('./Middleware/gpassport').initializeGoogleAuth;
 // use routes
 const groups = require('./routes/api/groups');
 app.use('/api/groups', groups);
