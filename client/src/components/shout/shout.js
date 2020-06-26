@@ -5,7 +5,6 @@ import imgPlaceHolder from './../../assets/images/placeholder-profile.jpg';
 
 //Importing CSS
 import './shout.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SendBtn from './../../assets/images/sendBtn.svg';
 
 class Shout extends Component {

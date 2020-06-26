@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Importing CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class NotFound extends Component {
 
