@@ -17,11 +17,11 @@ class GroupHeader extends Component {
                 <div className="groupInfo d-flex justify-content-between">
                     <div className="left-groupInfo d-flex justify-content-left">
                         <div className="groupLogo">
-                            <img src="#"></img>
+                            <img src="#" alt="placeholder"></img>
                         </div>
                         <div className="groupInfo-heading">
-                            <h3> {this.props.groupid} </h3>
-                            <h6> Student Organization</h6>
+                            <h3> {this.props.groupName} </h3>
+                            <h6> {this.props.groupGenre}</h6>
                             <h6> @MIT </h6>
                         </div>
                         <div className="groupInfo-divider"></div>
@@ -41,7 +41,7 @@ class GroupHeader extends Component {
                     <div className="right-groupInfo">
                         <ul className="groupLabels text-center">
                             <li className="groupLabels-title"> Members </li>
-                            <li className="groupLabels-number"> 987,345 </li>
+                            <li className="groupLabels-number"> {this.props.memberCount || 0} </li>
                         </ul>
                     </div>
                 </div>

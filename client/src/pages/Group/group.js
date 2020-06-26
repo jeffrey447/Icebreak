@@ -17,7 +17,7 @@ class Group extends Component {
     super();
 
     this.state = {
-
+      section: "feed"
     }
   }
 
@@ -37,8 +37,7 @@ class Group extends Component {
     
     return (
       <div className="activity-container">
-          {console.log(groups)}
-          <GroupHeader groupid={groups.name}/>
+          <GroupHeader groupName={groups.name}/>
           <Shout/>
           <News/>
       </div>

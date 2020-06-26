@@ -16,7 +16,7 @@ class Shout extends Component {
                 <div className="shout-container">
                     <div className="shout-header">
                         <div className="profile-picture">
-                            <img src={imgPlaceHolder} alt="image-place-holder"/>
+                            <img src={imgPlaceHolder} alt="place-holder"/>
                             <div className="online-status"></div>
                         </div>
                         <div className="user-name-position">
@@ -38,7 +38,7 @@ class Shout extends Component {
                         <form className="shout-input-container">
                             <input className="shout-input py-2 px-2" type="text" placeholder="Enter your shout"/>
                             <button type="submit">
-                                <img src={SendBtn}></img>
+                                <img src={SendBtn} alt="shout-send-btn"></img>
                             </button>
                         </form>
                     </div>

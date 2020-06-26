@@ -44,6 +44,10 @@
     text-transform: uppercase;
 }
 
+.groupNavbar ul li:hover{
+    font-weight: bold;
+}
+
 .groupInfo-divider{
     position: relative;
     top: 1rem;

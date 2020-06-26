@@ -26,6 +26,10 @@ const groupsSchema = new schema({
         type: String,
     },
     owner: {
+        type: schema.Types.ObjectId,
+        required: true
+    },
+    school : {
         type: String,
     },
     memberCount: {
@@ -50,6 +54,16 @@ const groupsSchema = new schema({
         type: String,
         default: JSON.stringify([])
     },
+    shout: [
+        {
+            content: {
+                type: String,
+            },
+            shouter: {
+                type: schema.Types.ObjectId
+            }
+        }
+    ],
     media: [
         {
             facebook: {
