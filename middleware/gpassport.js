@@ -1,13 +1,11 @@
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-
-const express = require('express');
-const router = express.Router();
 const User = require('../models/user');
+const passportjs = require('passport');
 
 // load env vars
 require('dotenv').config();
 
-module.exports = (passport) => {
+let initializeGoogleAuth = (passport) => {
   // used to serialize the user for the session
   passport.serializeUser((user, done) => {
     done(null, user);
@@ -73,4 +71,18 @@ module.exports = (passport) => {
         });
     });
   }));
-};
+} 
+
+let isUserAuthenticated = (req, res, next) => {
+    if (req.isAuthenticated() && req.user != null) {
+        return next();
+    }
+    res.redirect(process.env.HOME_DOMAIN);
+}
+
+module.exports = {
+    initializeGoogleAuth,
+    signIn: passportjs.authenticate('google', {scope: ['profile', 'email']}),
+    callback: passportjs.authenticate('google', { successRedirect : '/', failureRedirect : '/'}),
+    isUserAuthenticated
+}

@@ -5,7 +5,6 @@ import Navbar from '../navbar/navbar'
 
 //Importing CSS
 import '../groupHeader/gheader.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class GroupHeader extends Component {
     render() {

@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages
 import Home from './pages/Home/home';
-import Activity from './pages/Activity/activity';
+import Landing from './pages/Landing/landing';
 import Group from './pages/Group/group';
 import createGroup from './pages/Group/createGroup';
 import GroupListing from './pages/Group/groupListing';
@@ -20,8 +20,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/activity' component={Activity}/>
+          <Route exact path='/' component={Landing}/>
+          <Route exact path='/home' component={Home}/>
           <Route exact path='/create' component={createGroup}/>
           <Route exact path='/groups' component={GroupListing}/>
           <Route path="/:handler" component={Group}/>
