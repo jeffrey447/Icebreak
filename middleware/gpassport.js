@@ -78,6 +78,6 @@ let isUserAuthenticated = (req, res, next) => {
 
 module.exports = {
     signIn: passport.authenticate('google', {scope: ['profile', 'email']}),
-    callback: passport.authenticate('google', { successRedirect : '/', failureRedirect : '/'}),
+    callback: passport.authenticate('google', { successRedirect : 'http://localhost:3000/home', failureRedirect : process.env.HOME_DOMAIN}),
     isUserAuthenticated
 }

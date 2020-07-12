@@ -15,14 +15,16 @@ app.use(session({
     resave: true,
     saveUninitialized: false
 }));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.json());
 
 mongoose
-    .connect(process.env.MONGO_URI, { 
-        useNewUrlParser: true, 
+    .connect(process.env.MONGO_URI, {
+        useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true
     })
@@ -41,4 +43,4 @@ const users = require('./routes/api/users');
 app.use('/api/users', users);
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server started on port ${port}`)); 
+app.listen(port, () => console.log(`Server started on port ${port}`));

@@ -1,4 +1,10 @@
-import { GET_GROUPS, GET_GROUP, ADD_GROUP, DELETE_GROUP, GROUPS_LOADING} from '../actions/types';
+import {
+    GET_GROUPS,
+    GET_GROUP,
+    ADD_GROUP,
+    DELETE_GROUP,
+    GROUPS_LOADING
+} from '../actions/types';
 
 const initalState = {
     groups: [],
@@ -6,18 +12,18 @@ const initalState = {
 }
 
 export default (state = initalState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case GET_GROUPS:
             return {
                 ...state,
                 groups: action.payload,
-                loading: false
+                    loading: false
             };
         case GET_GROUP:
             return {
                 ...state,
                 groups: action.payload[0],
-                loading: false
+                    loading: false
             };
         case DELETE_GROUP:
             return {

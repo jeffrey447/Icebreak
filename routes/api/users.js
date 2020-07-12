@@ -3,7 +3,7 @@ const router = Router();
 
 const User = require('../../models/user');
 
-//@route GET api/groups
+//@route GET api/users
 //@desc GET all groups
 //@access Public
 router.get('/', (req, res) => {
